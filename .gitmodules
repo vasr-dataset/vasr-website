@@ -2,3 +2,7 @@
 	path = Lampent.github.io
 	url = https://github.com/Lampent/Lampent.github.io.git
 	branch = main
+[submodule "vasr-dataset.github.io"]
+	path = vasr-dataset.github.io
+	url = https://github.com/vasr-dataset/vasr-dataset.github.io.git
+	branch = main
