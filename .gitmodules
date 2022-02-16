@@ -1,0 +1,4 @@
+[submodule "Lampent.github.io"]
+	path = Lampent.github.io
+	url = https://github.com/Lampent/Lampent.github.io.git
+	branch = main

@@ -1,0 +1,74 @@
+.analogy-container {
+  width: 125%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.board {
+  display: flex;
+}
+
+.left-board, .right-board {
+  box-shadow:   0 0 0.2rem rgb(0 0 0 / 30%);
+  width: 49%;
+  height: 100%;
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+}
+
+.images-board {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.analogy-image-container {
+  flex: 1 0 41%; /* explanation below */
+  height: auto;
+  width: auto;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.label {
+  color: #4d5568;
+}
+
+.board-title {
+  font-size: 2rem;
+}
+
+.shake {
+  animation-name: shake-animation;
+  animation-duration: 0.3s;
+}
+
+@keyframes shake-animation {
+  10%, 90% {
+    transform: translate3d(-0.5px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-3px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(3px, 0, 0);
+  }
+}
+
+.hint-label {
+  padding-top: 1rem;
+  font-size: 1.2rem;
+}
+
+img {
+  width: 237px;
+  height: 237px;
+}
+

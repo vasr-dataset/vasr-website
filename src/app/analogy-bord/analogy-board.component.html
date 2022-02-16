@@ -1,0 +1,38 @@
+<canvas id="confetti" [ngStyle]="{position: 'absolute', 'pointer-events': 'none'}"></canvas>
+<div class="analogy-container">
+    <div class="board left-board">
+        <div class="label board-title"> Analogy</div>
+        <div class="images-board">
+            <div class="analogy-image-container">
+                <div class="label image-label">{{_analogy?.a?.label}}</div>
+                <img src="{{_analogy?.a?.img}}">
+            </div>
+            <div class="analogy-image-container">
+                <div class="label image-label">{{_analogy?.aTag?.label}}</div>
+                <img src="{{_analogy?.aTag?.img}}">
+            </div>
+            <div class="analogy-image-container">
+                <div class="label image-label">{{_analogy?.b?.label}}</div>
+                <img src="{{_analogy?.b?.img}}">
+            </div>
+            <div class="analogy-image-container">
+                <div class="label image-label">{{_analogy?.bTag?.label}}</div>
+                <img src="{{_analogy.answer ? _analogy.answer.img : 'assets/img/b-tag.JPG'}}">
+            </div>
+        </div>
+    </div>
+    <div class="board right-board">
+        <div class="label board-title"> Candidates</div>
+        <div class="images-board">
+            <div class="analogy-image-container" [ngClass] ="{'shake': candidate.shaken}" (click)="selectCandidate(candidate)" *ngFor="let candidate of _candidates;">
+                <div class="label image-label">{{candidate.label}}</div>
+                <img src="{{candidate.img}}">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="label hint-label" *ngIf="hint">
+    <i style="color: red" class="fas fa-times" *ngIf="!testMode && !_analogy?.answer"></i> <span *ngIf="!testMode && !_analogy?.answer"> Wrong, </span>
+    <i style="color: green" class="fas fa-check" *ngIf="!testMode && _analogy?.answer"></i> <span *ngIf="!testMode && _analogy?.answer"> Correct, </span>
+    {{hint}}
+</div>
