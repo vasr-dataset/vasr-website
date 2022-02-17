@@ -17,6 +17,7 @@ export class AnalogyBoardComponent implements OnInit {
   confetti: ConfettiGenerator;
   confettiShown = false;
   @Input() testMode = false;
+  @Input() title = '';
   @Output() selected$: EventEmitter<Candidate> = new EventEmitter<Candidate>();
 
   constructor() { }

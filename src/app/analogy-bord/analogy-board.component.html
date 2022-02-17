@@ -1,27 +1,34 @@
 <canvas id="confetti" [ngStyle]="{position: 'absolute', 'pointer-events': 'none'}"></canvas>
+<h3 style="text-transform: none;">{{title}}</h3>
 <div class="analogy-container">
-    <div class="board left-board">
-        <div class="label board-title"> Analogy</div>
-        <div class="images-board">
-            <div class="analogy-image-container">
-                <div class="label image-label">{{_analogy?.a?.label}}</div>
-                <img src="{{_analogy?.a?.img}}">
-            </div>
-            <div class="analogy-image-container">
-                <div class="label image-label">{{_analogy?.aTag?.label}}</div>
-                <img src="{{_analogy?.aTag?.img}}">
-            </div>
-            <div class="analogy-image-container">
-                <div class="label image-label">{{_analogy?.b?.label}}</div>
-                <img src="{{_analogy?.b?.img}}">
-            </div>
-            <div class="analogy-image-container">
-                <div class="label image-label">{{_analogy?.bTag?.label}}</div>
-                <img src="{{_analogy.answer ? _analogy.answer.img : 'assets/img/b-tag.JPG'}}">
+    <div class="left-board-container">
+        <div class="board left-board">
+            <div class="label board-title"> Analogy</div>
+            <div class="images-board">
+                <div class="analogy-image-container">
+                    <div class="label image-label">{{_analogy?.a?.label}}</div>
+                    <img src="{{_analogy?.a?.img}}">
+                </div>
+                <div class="analogy-image-container">
+                    <div class="label image-label">{{_analogy?.aTag?.label}}</div>
+                    <img src="{{_analogy?.aTag?.img}}">
+                </div>
+                <div class="center-separator">
+                    <div class="separator-label">:</div>
+                </div>
+                <div class="analogy-image-container">
+                    <div class="label image-label">{{_analogy?.b?.label}}</div>
+                    <img src="{{_analogy?.b?.img}}">
+                </div>
+                <div class="analogy-image-container">
+                    <div class="label image-label">{{_analogy?.bTag?.label}}</div>
+                    <img src="{{_analogy.answer ? _analogy.answer.img : 'assets/img/b-tag.JPG'}}">
+                </div>
             </div>
         </div>
     </div>
-    <div class="board right-board">
+    <div class="right-board-container">
+        <div class="board right-board">
         <div class="label board-title"> Candidates</div>
         <div class="images-board">
             <div class="analogy-image-container" [ngClass] ="{'shake': candidate.shaken}" (click)="selectCandidate(candidate)" *ngFor="let candidate of _candidates;">
@@ -29,6 +36,7 @@
                 <img src="{{candidate.img}}">
             </div>
         </div>
+    </div>
     </div>
 </div>
 <div class="label hint-label" *ngIf="hint">

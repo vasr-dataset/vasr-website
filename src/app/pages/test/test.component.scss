@@ -69,7 +69,14 @@ h1, h3 {
   justify-content: space-between;
   align-items: center;
   display: flex;
+  flex-wrap: wrap;
   padding-bottom: 3rem;
+}
+
+@media (max-width: 800px) {
+  .explore-nav {
+    justify-content: center;
+  }
 }
 
 .results-nav {

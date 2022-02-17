@@ -106,3 +106,63 @@ analogiesDictionary.set('victim', {
     ]
 });
 
+analogiesDictionary.set('tool-2', {
+    analogy: new Analogy(new AnalogyElement('A', '/assets/img/tool-analogy-2/a.JPG'), new AnalogyElement('A\'', '/assets/img/tool-analogy-2/a-tag.JPG'),
+        new AnalogyElement('B', '/assets/img/tool-analogy-2/b.JPG'), new AnalogyElement('B\'', '/tool-analogy-2/b-tag.JPG')),
+    candidates: [
+        new Candidate('/assets/img/tool-analogy-2/c1.JPG','The difference between  A and A\' is tool tractor changed to people\'s hand.', '1'),
+        new Candidate('/assets/img/tool-analogy-2/b-tag.JPG','Good job!', '2', true),
+        new Candidate('/assets/img/tool-analogy-2/c3.JPG', 'B\' should be similar to B except of the tool.', '3'),
+        new Candidate('/assets/img/tool-analogy-2/c4.JPG','The difference between  A and A\' is tool tractor changed to people\'s hand.', '4')
+    ]
+});
+
+
+analogiesDictionary.set('verb-2', {
+    analogy: new Analogy(new AnalogyElement('A', '/assets/img/verb-analogy-2/a.JPG'), new AnalogyElement('A\'', '/assets/img/verb-analogy-2/a-tag.JPG'),
+        new AnalogyElement('B', '/assets/img/verb-analogy-2/b.JPG'), new AnalogyElement('B\'', '/assets/img/verb-analogy-2/b-tag.JPG')),
+    candidates: [
+        new Candidate('/assets/img/verb-analogy-2/c1.JPG','B\' should be similar to B except of the verb.', '1'),
+        new Candidate('/assets/img/verb-analogy-2/c2.JPG', 'The difference between  A and A\' is verb frowning changed to whirling.', '2'),
+        new Candidate('/assets/img/verb-analogy-2/c3.JPG','B\' should be similar to B except of the verb.', '3'),
+        new Candidate('/assets/img/verb-analogy-2/b-tag.JPG','Good job!', '4', true),
+    ]
+});
+
+
+analogiesDictionary.set('agent-2', {
+    analogy: new Analogy(new AnalogyElement('A', '/assets/img/agent-analogy-2/a.JPG'), new AnalogyElement('A\'', '/assets/img/agent-analogy-2/a-tag.JPG'),
+        new AnalogyElement('B', '/assets/img/agent-analogy-2/b.JPG'), new AnalogyElement('B\'', '/assets/img/agent-analogy-2/b-tag.JPG')),
+    candidates: [
+        new Candidate('/assets/img/agent-analogy-2/c1.JPG','The difference between  A and A\' is agent car changed to motorcycle.', '1'),
+        new Candidate('/assets/img/agent-analogy-2/c2.JPG', 'B\' should be similar to B except of the agent.', '2'),
+        new Candidate('/assets/img/agent-analogy-2/b-tag.JPG','Good job!', '3', true),
+        new Candidate('/assets/img/agent-analogy-2/c4.JPG','B\' should be similar to B except of the agent.', '4')
+    ]
+});
+
+
+analogiesDictionary.set('agent-3', {
+    analogy: new Analogy(new AnalogyElement('A', '/assets/img/agent-analogy-3/a.JPG'), new AnalogyElement('A\'', '/assets/img/agent-analogy-3/a-tag.JPG'),
+        new AnalogyElement('B', '/assets/img/agent-analogy-3/b.JPG'), new AnalogyElement('B\'', '/assets/img/agent-analogy-3/b-tag.JPG')),
+    candidates: [
+        new Candidate('/assets/img/agent-analogy-3/c1.JPG','B\' should be similar to B except of the agent.', '1'),
+        new Candidate('/assets/img/agent-analogy-3/c2.JPG', 'The difference between  A and A\' is agent dog changed to man.', '2'),
+        new Candidate('/assets/img/agent-analogy-3/b-tag.JPG','Good job!', '3', true),
+        new Candidate('/assets/img/agent-analogy-3/c4.JPG','B\' should be similar to B except of the agent.', '4')
+    ]
+});
+
+
+analogiesDictionary.set('item-2', {
+    analogy: new Analogy(new AnalogyElement('A', '/assets/img/item-analogy-2/a.JPG'), new AnalogyElement('A\'', '/assets/img/item-analogy-2/a-tag.JPG'),
+        new AnalogyElement('B', '/assets/img/item-analogy-2/b.JPG'), new AnalogyElement('B\'', '/assets/img/item-analogy-2/b-tag.JPG')),
+    candidates: [
+        new Candidate('/assets/img/item-analogy-2/c1.JPG','The difference between  A and A\' is item motorcycle changed to car.', '1'),
+        new Candidate('/assets/img/item-analogy-2/c2.JPG', 'B\' should be similar to B except of the item.', '2'),
+        new Candidate('/assets/img/item-analogy-2/b-tag.JPG','Good job!', '3', true),
+        new Candidate('/assets/img/item-analogy-2/c4.JPG','B\' should be similar to B except of the item.', '4')
+    ]
+});
+
+

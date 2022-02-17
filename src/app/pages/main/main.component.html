@@ -112,11 +112,16 @@
         <div class="squares square7"></div>
         <div class="container center-container">
             <div class="content-center brand">
-                <h1 class="h1-seo" >VASR</h1>
-                <h3>
-                  The new dataset for visual analogies of situation recognition. Choose B' out of the available candidates. The key difference between A and A’ is that the agent is changed from man to monkey.
+                <h4 class="h1-seo" >VASR: Visual Analogies of Situation Recognition
+
+                </h4>
+                <h3 style="padding-top: 2rem">
+                    You need to choose an option out of 4 images.
+                    <br/>
+                    Choose the image that best solves the analogy.
+                    <br/>
                 </h3>
-                <app-analogy-board class="analogies-board" [analogy]="analogy" [candidates]="candidates"> </app-analogy-board>
+                <app-analogy-board class="analogies-board" [analogy]="analogy" [candidates]="candidates" [title]="'A is to A’ as B is to?'"> </app-analogy-board>
             </div>
         </div>
     </div>
@@ -129,7 +134,7 @@
                         <div class="stat-description">Analogies</div>
                     </div>
                     <div class="stats-block">
-                        <div class="stat-label">100+</div>
+                        <div class="stat-label">14</div>
                         <div class="stat-description">Analogies Types</div>
                     </div>
                     <div class="stats-block">

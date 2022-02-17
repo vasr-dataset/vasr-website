@@ -21,8 +21,8 @@ export class TestComponent implements OnInit, OnDestroy {
   answers: Map<string, Candidate> = new Map<string, Candidate>();
   submittedAnswers = false
 
-  analogy: Analogy = getAnalogy('agent').analogy;
-  candidates: Candidate[] = getAnalogy('agent').candidates;
+  analogy: Analogy = getAnalogy('agent-2').analogy;
+  candidates: Candidate[] = getAnalogy('agent-2').candidates;
 
   constructor(private router: Router, private changeDetectorRef: ChangeDetectorRef) {
     window.name = 'VASR'
@@ -66,8 +66,8 @@ export class TestComponent implements OnInit, OnDestroy {
   init() {
     this.answers = new Map<string, Candidate>();
     this.currentAnalogy = '1';
-    this.analogy = getAnalogy('agent').analogy;
-    this.candidates = getAnalogy('agent').candidates;
+    this.analogy = getAnalogy('agent-2').analogy;
+    this.candidates = getAnalogy('agent-2').candidates;
     this.submittedAnswers = false;
   }
 
@@ -79,12 +79,27 @@ export class TestComponent implements OnInit, OnDestroy {
   setAnalogy(analogyName: string): void {
     analogyName = analogyName?.toLowerCase()
     this.currentAnalogy = analogyName;
-    if (analogyName === '1') {
-      this.analogy = getAnalogy('agent').analogy;
-      this.candidates = getAnalogy('agent').candidates;
-    } else {
-      this.analogy = getAnalogy('tool').analogy;
-      this.candidates = getAnalogy('tool').candidates;
+    switch (analogyName) {
+      case '1':
+        this.analogy = getAnalogy('agent-2').analogy;
+        this.candidates = getAnalogy('agent-2').candidates;
+        break;
+      case '2':
+        this.analogy = getAnalogy('tool-2').analogy;
+        this.candidates = getAnalogy('tool-2').candidates;
+        break;
+      case '3':
+        this.analogy = getAnalogy('verb-2').analogy;
+        this.candidates = getAnalogy('verb-2').candidates;
+        break;
+      case '4':
+        this.analogy = getAnalogy('item-2').analogy;
+        this.candidates = getAnalogy('item-2').candidates;
+        break;
+      case '5':
+        this.analogy = getAnalogy('agent-3').analogy;
+        this.candidates = getAnalogy('agent-3').candidates;
+        break;
     }
 
     if (this.answers.has(analogyName)) {

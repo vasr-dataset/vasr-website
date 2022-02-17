@@ -66,10 +66,17 @@ h1, h3 {
 
 .explore-nav {
   width: 120%;
-  justify-content: space-between;
   align-items: center;
   display: flex;
   padding-bottom: 3rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media (max-width: 1000px) {
+  .explore-nav {
+    justify-content: center;
+  }
 }
 
 
