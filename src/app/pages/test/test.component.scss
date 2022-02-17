@@ -79,6 +79,14 @@ h1, h3 {
   }
 }
 
+
+@media (max-width: 500px) {
+  .results-nav {
+    width: 85vw;
+    overflow-y: scroll;
+  }
+}
+
 .results-nav {
   justify-content: space-between;
   align-items: center;

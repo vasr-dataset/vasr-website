@@ -128,6 +128,12 @@
   }
 }
 
+@media (max-width: 480px) {
+  .navbar-brand {
+    font-size: 0.7rem !important;
+  }
+}
+
 .navbar-minimize-fixed {
   position: fixed;
   margin-left: 40px;

@@ -78,3 +78,14 @@ h3 {
   padding-bottom: 1rem;
   padding-top: 1rem;
 }
+
+@media (max-width: 450px) {
+  .stats-block {
+    padding: 0.5rem !important;
+  }
+
+  .stat-label {
+    font-size: 1.3rem;
+  }
+
+}
