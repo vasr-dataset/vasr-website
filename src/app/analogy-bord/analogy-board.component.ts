@@ -16,6 +16,7 @@ export class AnalogyBoardComponent implements OnInit {
   confettiSettings = { target: 'confetti' };
   confetti: ConfettiGenerator;
   confettiShown = false;
+  @Input() enableSelection = true;
   @Input() testMode = false;
   @Input() title = '';
   @Output() selected$: EventEmitter<Candidate> = new EventEmitter<Candidate>();
@@ -43,23 +44,25 @@ export class AnalogyBoardComponent implements OnInit {
   }
 
   selectCandidate(candidate: Candidate): void {
-    this.setConfetti();
-    if (candidate.solver) {
-      this._analogy.answer = candidate;
-      this.selected$.emit(candidate);
-      if (!this.testMode) {
-        this.hint = candidate.hint
-        this.renderConfetti()
-      }
-    } else {
-      this.selected$.emit(candidate);
-      if (!this.testMode) {
-        this.hint = 'Hint: ' + candidate.hint;
-        this.shakeCandidate(candidate);
-        this.clearConfetti()
-        this._analogy.answer = null
-      } else {
+    if (this.enableSelection) {
+      this.setConfetti();
+      if (candidate.solver) {
         this._analogy.answer = candidate;
+        this.selected$.emit(candidate);
+        if (!this.testMode) {
+          this.hint = candidate.hint
+          this.renderConfetti()
+        }
+      } else {
+        this.selected$.emit(candidate);
+        if (!this.testMode) {
+          this.hint = 'Hint: ' + candidate.hint;
+          this.shakeCandidate(candidate);
+          this.clearConfetti()
+          this._analogy.answer = null
+        } else {
+          this._analogy.answer = candidate;
+        }
       }
     }
   }

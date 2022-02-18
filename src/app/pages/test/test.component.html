@@ -118,34 +118,30 @@
                 </h3>
 
                 <h4 class="example-label">
-                    Instruction: 5 analogies will be displayed, in any given time you can go back and edit your answers. Once you finished, click on the submit button. If you would like to start over, click on the reset button.
-                    After submitting the answers, the results will be displayed below the submit button.If you answered wrong, hovering above the analogy number will explain why.
+                    Instruction: 5 analogies will be displayed, once at a time. For each analogy, carefully choose your answer and click on the submit button when you are sure.
+                    After finishing the test, you will receive a score and feedback on your solutions.
+                    Moreover, you will be able to navigate all the questions and access your score and feedback at any given time.
                 </h4>
 
                 <div class="explore-nav">
-                    <button class="btn btn-neutral" [ngClass]="{'selected-button': currentAnalogy === '1'}" (click)="setAnalogy('1')">1</button>
-                    <button class="btn btn-neutral" [ngClass]="{'selected-button': currentAnalogy === '2'}" (click)="setAnalogy('2')">2</button>
-                    <button class="btn btn-neutral" [ngClass]="{'selected-button': currentAnalogy === '3'}" (click)="setAnalogy('3')">3</button>
-                    <button class="btn btn-neutral" [ngClass]="{'selected-button': currentAnalogy === '4'}" (click)="setAnalogy('4')">4</button>
-                    <button class="btn btn-neutral" [ngClass]="{'selected-button': currentAnalogy === '5'}" (click)="setAnalogy('5')">5</button>
+                    <button class="btn btn-neutral" [ngClass]="{'selected-button': currentAnalogy === 1}" (click)="setAnalogyNumber(1)">1</button>
+                    <button class="btn btn-neutral" [ngClass]="{'selected-button': currentAnalogy === 2}" (click)="setAnalogyNumber(2)">2</button>
+                    <button class="btn btn-neutral" [ngClass]="{'selected-button': currentAnalogy === 3}" (click)="setAnalogyNumber(3)">3</button>
+                    <button class="btn btn-neutral" [ngClass]="{'selected-button': currentAnalogy === 4}" (click)="setAnalogyNumber(4)">4</button>
+                    <button class="btn btn-neutral" [ngClass]="{'selected-button': currentAnalogy === 5}" (click)="setAnalogyNumber(5)">5</button>
                 </div>
-                <app-analogy-board class="analogies-board" [testMode]="true" [analogy]="analogy"
+                <app-analogy-board class="analogies-board" [enableSelection]="!submittedAnswers" [testMode]="true" [analogy]="analogy"
                                    [candidates]="candidates" (selected$)="selectedAnswer($event)"></app-analogy-board>
                 <div class="test-nav">
-                    <button class="btn btn-neutral" (click)="submitAnswers()">Submit</button>
+                    <button class="btn btn-neutral" (click)="nextAnalogy()">{{currentAnalogy >= 5 ? (currentAnalogy === 5 ? 'Finish' : 'Show Results') : 'Submit'}}</button>
                     <button class="btn btn-neutral" (click)="restTest()"><i class="fas fa-redo-alt"> </i></button>
                 </div>
-                <div class="results-nav" *ngIf="submittedAnswers">
-                    <button class="btn btn-neutral" tooltip="{{answers.get('1')?.hint || 'No candidate was selected' }}" [ngClass]="answers.get('1')?.solver ? 'correct-answer' : 'wrong-answer'">1</button>
-                    <button class="btn btn-neutral" tooltip="{{answers.get('2')?.hint || 'No candidate was selected' }}" [ngClass]="answers.get('2')?.solver ? 'correct-answer' : 'wrong-answer'">2</button>
-                    <button class="btn btn-neutral" tooltip="{{answers.get('3')?.hint || 'No candidate was selected' }}" [ngClass]="answers.get('3')?.solver ? 'correct-answer' : 'wrong-answer'">3</button>
-                    <button class="btn btn-neutral" tooltip="{{answers.get('4')?.hint || 'No candidate was selected' }}" [ngClass]="answers.get('4')?.solver ? 'correct-answer' : 'wrong-answer'">4</button>
-                    <button class="btn btn-neutral" tooltip="{{answers.get('5')?.hint || 'No candidate was selected' }}" [ngClass]="answers.get('5')?.solver ? 'correct-answer' : 'wrong-answer'">5</button>
-                </div>
+
             </div>
 
         </div>
     </div>
+
     <footer class="footer">
         <div class="container">
             <div class="footer-row">

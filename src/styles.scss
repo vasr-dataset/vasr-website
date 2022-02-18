@@ -58,6 +58,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+.footer {
+  text-align: center !important;
+  border: 0 !important;
+  padding: 3rem 1rem 1rem !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+
 .tooltip-inner {
   font-size: 1rem !important;
   max-width: 300px !important;
@@ -83,3 +92,67 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   padding-bottom: 1rem;
 }
+
+// modal
+
+.cdk-overlay-pane {
+  width: 450px !important;
+  height: 400px!important;
+}
+
+.mat-dialog-container {
+  background-color: #ffeced !important;
+  overflow: hidden !important;
+}
+
+
+/* ~/scrollbar.css */
+
+/* Default (light) theme */
+:root {
+  --page-background: white;
+
+  --scrollbar-track: transparent;
+  --scrollbar-thumb: #ffc6c8;
+  --scrollbar-thumb-hover: #ffb1b4;
+
+  --scrollbar-width: 12px;
+}
+/* Default (light) theme */
+
+/* Dark theme */
+html.dark {
+  --page-background: black;
+
+  --scrollbar-thumb: #ffc6c8;
+  --scrollbar-thumb-hover: #ffb1b4;
+}
+/* Dark theme */
+
+/* Firefox */
+* {
+  scrollbar-width: thick; /* none | auto  */
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+/* Firefox */
+
+/* Chrome, Edge, Safari */
+*::-webkit-scrollbar {
+  width: var(--scrollbar-width); /* vertical scrollbar */
+  height: var(--scrollbar-width); /* horizontal scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: var(--scrollbar-width);
+  border: calc(var(--scrollbar-width) / 4) solid var(--page-background);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+/* Chrome, Edge, Safari */

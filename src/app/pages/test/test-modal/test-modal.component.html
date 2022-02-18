@@ -1,0 +1,19 @@
+<div class="results-container">
+    <div class="header">
+        <h3>Score: {{score}}</h3>
+    </div>
+    <div class="results-nav-container">
+        <div class="results-nav">
+            <div class="label hint-label" *ngFor="let index of questionIndexArray">
+                {{'Question ' + index + ': '}}
+                <i style="color: red" class="fas fa-times" *ngIf="!answers.get(index)?.solver"></i> <span *ngIf="!answers.get(index)?.solver"> Wrong, </span>
+                <i style="color: green" class="fas fa-check" *ngIf="answers.get(index)?.solver"></i> <span *ngIf="answers.get(index)?.solver"> Correct, </span>
+                {{this.answers?.get(index)?.hint || 'No candidate was selected'}}
+            </div>
+        </div>
+    </div>
+
+    <div class="test-nav">
+        <button class="btn btn-neutral" (click)="close()"> Close </button>
+    </div>
+</div>

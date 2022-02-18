@@ -32,12 +32,7 @@ h1, h3 {
   text-align: center;
 }
 
-.footer {
-  text-align: center;
-  border: 0;
-  background: transparent;
-  padding: 1rem;
-}
+
 
 .abstract {
   display: flex;
@@ -68,7 +63,7 @@ h1, h3 {
   width: 120%;
   align-items: center;
   display: flex;
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
   flex-wrap: wrap;
   justify-content: space-between;
 }
@@ -91,12 +86,12 @@ h1, h3 {
 
 .example-label {
   width: 120%;
-  padding-bottom: 1.1rem
+  padding-bottom: 2.2rem;
 }
 
 .main-label {
   font-weight: 600;
-  padding-bottom: 4rem;
+  padding-bottom: 3rem;
   text-transform: none !important;
 }
 

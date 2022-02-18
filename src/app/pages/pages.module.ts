@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import {APP_BASE_HREF, CommonModule} from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import {RouterModule, Routes} from '@angular/router';
+import {MatDialogModule} from '@angular/material/dialog';
 
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
@@ -22,6 +23,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ExploreComponent} from './explore/explore.component';
 import { TestComponent } from './test/test.component';
 import { DownloadComponent } from './download/download.component';
+import { TestModalComponent } from './test/test-modal/test-modal.component';
 
 const routes: Routes = [
   { path: 'explore', component: ExploreComponent },
@@ -35,6 +37,7 @@ const routes: Routes = [
     CommonModule,
     BrowserModule,
     FormsModule,
+    MatDialogModule,
     RouterModule.forRoot(routes,{onSameUrlNavigation: 'reload'}),
     BsDropdownModule.forRoot(),
     ProgressbarModule.forRoot(),
@@ -55,7 +58,8 @@ const routes: Routes = [
     ExploreComponent,
     AnalogyBoardComponent,
     TestComponent,
-    DownloadComponent
+    DownloadComponent,
+    TestModalComponent
   ],
   exports: [
     MainComponent,

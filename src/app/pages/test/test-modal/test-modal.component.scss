@@ -1,3 +1,23 @@
+.results-nav {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+}
+
+.results-nav > .btn {
+  margin: 0;
+  border-radius: 0;
+  border: solid 1px #3c213c;
+}
+
+.results-nav > .btn:last-child {
+  border-right: solid 2px #3c213c;
+}
+
+.results-nav > .btn:first-child {
+  border-left: solid 2px #3c213c;
+}
+
 
 h1, h3 {
   color: #4d5568 !important;
@@ -32,6 +52,13 @@ h1, h3 {
   text-align: center;
 }
 
+.footer {
+  text-align: center;
+  border: 0;
+  background: transparent;
+  padding: 1rem;
+}
+
 .abstract {
   display: flex;
   justify-content: center;
@@ -63,7 +90,7 @@ h1, h3 {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  padding-bottom: 1rem;
+  padding-bottom: 3rem;
 }
 
 @media (max-width: 800px) {
@@ -75,24 +102,18 @@ h1, h3 {
 
 @media (max-width: 500px) {
   .results-nav {
-    width: 85vw;
+    width: 58vw;
     overflow-y: scroll;
   }
 }
 
-
-@media (max-width: 760px) {
-  .test-nav {
-    width: 100% !important;
-  }
-}
-
 .test-nav {
-  width: 40%;
-  justify-content: space-between;
+  margin: auto;
+  width: 80%;
+  justify-content: center;
   align-items: center;
   display: flex;
-  padding-top: 1rem;
+  padding-top: 3rem;
 }
 
 
@@ -107,7 +128,7 @@ h1, h3 {
 
 .example-label {
   width: 125%;
-  padding-bottom: 2.2rem;
+  padding-bottom: 1.1rem
 }
 
 .main-label {
@@ -126,11 +147,6 @@ h1, h3 {
   background: #fab1b42e !important;
 }
 
-.fas {
-  font-size: 1.2rem;
-  color: #222a42 !important;
-  display: inline-block;
-}
 
 .wrong-answer, .wrong-answer:hover, .wrong-answer:visited, .wrong-answer:active .wrong-answer:target, .wrong-answer:focus {
   background: #ff3c3ce0 !important;
@@ -150,3 +166,35 @@ h1, h3 {
   font-size: 1rem !important;
 }
 
+.results-container {
+}
+
+.btn {
+  cursor: pointer !important;
+}
+
+h3 {
+  color: #222a42 !important;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.results-nav-container {
+  height: 178px;
+  overflow-y: scroll;
+}
+
+.explainer {
+  font-size: 18px;
+  padding-top: 20px;
+}
+
+.hint-label {
+  font-size: 16px;
+  padding: 7px 3px 0 3px;
+}
+
+.fas {
+  padding-left: 3px;
+  padding-right: 1px;
+}
