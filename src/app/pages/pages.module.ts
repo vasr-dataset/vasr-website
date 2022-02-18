@@ -24,6 +24,9 @@ import { TestComponent } from './test/test.component';
 import { DownloadComponent } from './download/download.component';
 
 const routes: Routes = [
+  { path: 'explore', component: ExploreComponent },
+  { path: 'test', component: TestComponent },
+  { path: 'download', component: DownloadComponent },
   { path: '**', component: MainComponent },
 ]
 

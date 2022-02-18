@@ -80,6 +80,12 @@ h1, h3 {
   height: 20rem;
 }
 
+@media (max-width: 800px) {
+  .card {
+    height: auto;
+  }
+}
+
 .card-header {
   height: 100%;
   display: flex;
@@ -108,4 +114,7 @@ h1, h3 {
 
 .button-container {
   padding-bottom: 1rem;
+  padding-top: 4rem;
+  display: flex;
+  justify-content: center;
 }
