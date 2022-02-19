@@ -24,6 +24,16 @@
   flex-wrap: wrap;
 }
 
+@media (max-width: 600px) {
+  .analogy-image-container {
+    flex: 1 0 41% !important; /* explanation below */
+  }
+
+  .center-separator {
+    display: none !important;
+  }
+}
+
 .analogy-image-container {
   flex: 1 0 21%; /* explanation below */
   height: auto;
