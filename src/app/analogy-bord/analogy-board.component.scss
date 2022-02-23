@@ -20,6 +20,7 @@
 }
 
 .images-board {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
 }
@@ -72,6 +73,55 @@
     transform: translate3d(3px, 0, 0);
   }
 }
+
+
+.remove-pointer {
+  display: none !important;
+}
+
+@media (max-width: 1375px) {
+  .pointer-container {
+    display: none !important;
+  }
+}
+
+.pointer-container {
+  color: black;
+  position: absolute;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  right: -160px;
+}
+
+.fas.moving-pointer {
+  font-weight: 500 !important;
+  font-size: 80px;
+  animation-name: moving-pointer;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+
+@keyframes moving-pointer {
+  from {
+    margin-left: 20px;
+  }
+
+  to {
+    margin-right: 30px;
+  }
+}
+
+
+.pointer-label {
+  font-size: 19px;
+}
+
 
 img {
   width: 237px;

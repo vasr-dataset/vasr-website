@@ -19,7 +19,6 @@
                     class="navbar-toggler navbar-toggler"
                     [attr.aria-expanded]="!isCollapsed"
                     (click)="isCollapsed = !isCollapsed"
-                    id="navigation"
                     type="button"
             >
                 <span class="navbar-toggler-bar bar1"> </span>
@@ -121,13 +120,13 @@
                     Choose the image that best solves the analogy.
                     <br/>
                 </h3>
-                <app-analogy-board class="analogies-board" [analogy]="analogy" [candidates]="candidates" [title]="'A is to A’ as B is to?'"> </app-analogy-board>
+                <app-analogy-board class="analogies-board" [analogy]="analogy" [candidates]="candidates" [title]="'A is to A’ as B is to?'" [enablePointer]="true"> </app-analogy-board>
             </div>
         </div>
     </div>
     <div class="main">
         <div class="section">
-            <div class="container ">
+            <div class="container stats-container">
                 <div class="stats-row">
                     <div class="stats-block">
                         <div class="stat-label">500K+</div>
@@ -138,11 +137,17 @@
                         <div class="stat-description">Analogies Types</div>
                     </div>
                     <div class="stats-block">
-                        <div class="stat-label">90%</div>
+                        <div class="stat-label">77%</div>
                         <div class="stat-description">Human Success Rate</div>
                     </div>
                 </div>
+                <div class="stats-lower-label">
+                    Several analogy types available in the <a class="stats-page-ref" href="./explore">Explore</a> page . <br>
+                    Test your analogy skills with 5 difficult analogies in the <a class="stats-page-ref" href="./test">Test</a> page.
+                </div>
             </div>
+
+
         </div>
         <div class="section">
             <div class="container">
@@ -153,7 +158,7 @@
             </div>
         </div>
         <div class="section">
-            <div class="container center-container">
+            <div class="container">
                 <div id="images">
                     <h3 class="mb-5 sub-title">Authors</h3>
                     <div class="row">

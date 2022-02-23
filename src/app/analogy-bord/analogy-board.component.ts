@@ -16,9 +16,11 @@ export class AnalogyBoardComponent implements OnInit {
   confettiSettings = { target: 'confetti' };
   confetti: ConfettiGenerator;
   confettiShown = false;
+  noSelection = true;
   @Input() enableSelection = true;
   @Input() testMode = false;
   @Input() title = '';
+  @Input() enablePointer = false;
   @Output() selected$: EventEmitter<Candidate> = new EventEmitter<Candidate>();
 
   constructor() { }
@@ -45,6 +47,7 @@ export class AnalogyBoardComponent implements OnInit {
 
   selectCandidate(candidate: Candidate): void {
     if (this.enableSelection) {
+      this.noSelection = false;
       this.setConfetti();
       if (candidate.solver) {
         this._analogy.answer = candidate;
