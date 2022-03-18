@@ -52,8 +52,8 @@ analogiesDictionary.set('item', {
         new AnalogyElement('B', '/assets/img/item-analogy/b.JPG'), new AnalogyElement('B\'', '/assets/img/item-analogy/b-tag.JPG')),
     candidates: [
         new Candidate('/assets/img/item-analogy/c1.JPG','B\' should be similar to B except of the item.', '1'),
-        new Candidate('/assets/img/item-analogy/c2.JPG', 'The difference between  A and A\' is item horse changed to man.', '2'),
-        new Candidate('/assets/img/item-analogy/c3.JPG','The difference between  A and A\' is item horse changed to man.', '3'),
+        new Candidate('/assets/img/item-analogy/c2.JPG', 'The difference between  A and A\' is item truck changed to tree.', '2'),
+        new Candidate('/assets/img/item-analogy/c3.JPG','The difference between  A and A\' is item truck changed to tree.', '3'),
         new Candidate('/assets/img/item-analogy/b-tag.JPG','Good job!', '4', true)
     ]
 });
