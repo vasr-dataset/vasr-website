@@ -17,6 +17,7 @@ export class DownloadComponent implements OnInit, OnDestroy {
   date = new Date();
   pagination = 3;
   pagination1 = 1;
+  downloadURL = 'https://drive.google.com/file/d/1bTbRfF8UxD8gwu41K3UGIro4iTEz12Zf/view?usp=share_link'
 
   analogy: Analogy = getAnalogy('monkey-human-swing').analogy;
   candidates: Candidate[] = getAnalogy('monkey-human-swing').candidates;

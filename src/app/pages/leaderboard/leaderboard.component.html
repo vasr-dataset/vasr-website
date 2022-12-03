@@ -132,76 +132,66 @@
         <div class="squares square6"></div>
         <div class="squares square7"></div>
         <div class="container center-container">
+            <div class="page-header header-filter">
+                <div class="container center-container">
+                    <div class="content-center brand ai-leaderboard">
+                        <h4 class="main-label">
+                            AI Models Leaderboard 🏆
+                        </h4>
+                        <div class="medium-note padding-bottom">
+                            <p style="padding-bottom: 10px">
+                                To submit predictions, please send a prediction CSV file to <a
+                                    href="mailto:vasr.benchmark@gmail.com">vasr.benchmark@gmail.com</a> / <a
+                                    href="mailto:yonatan.bitton@mail.huji.ac.il">yonatan.bitton@mail.huji.ac.il</a> .
+                            </p>
+                            <p>
+                                The prediction file should include a <b>B'</b> column with the predicted candidate name
+                                that best solves the analogy, and an index from 1 to 4 indicating the location of the
+                                predicted candidate in the given candidate list.
+                            </p>
+                            <p>
+                                This <a href="https://colab.research.google.com/drive/1HUg0aHonFDK3hVFrIRYdSEfpUJeY-4dI"
+                                        target="_blank">colab</a> shows an example of running ViT on VASR
+                            </p>
+                            <p>
+                                An example prediction file is available <a
+                                    href="https://drive.google.com/file/d/1NvBNdvlWmEOYjIVi2xdmQ_tUm-TXo42u/view?usp=share_link"
+                                    target="_blank">HERE</a>.
+                            </p>
+                            A submission is allowed once a week, and you will receive a response within a week.
+                        </div>
+                    </div>
+                    <div class="leaderboard-container">
+                        <div class="container">
+                            <ul class="responsive-table">
+                                <li class="table-header">
+                                    <div class="col-leaderboard col-2-AI-leaderboard">Model</div>
+                                    <div class="col-leaderboard col-3-leaderboard">Random Distractors</div>
+                                    <div class="col-leaderboard col-4-leaderboard">Difficult Distractors</div>
+                                </li>
 
-            <div class="content-center brand">
-                <div class="title"><h3 class="mb-3">Downloads</h3></div>
-                <div class="row">
-                    <div class="col-md-10 ml-auto col-xl-6 mr-auto">
-                        <div class="card">
-                            <div class="card-header">
-                                <tabset class="nav-tabs-danger">
-                                    <tab heading="Entire Train" (selectTab)="downloadURL = 'https://drive.google.com/file/d/1bTbRfF8UxD8gwu41K3UGIro4iTEz12Zf/view?usp=share_link'">
-                                        <b>Current dataset version:</b> v1.0 (released in December 2022)<br>
-                                        The entire train split, obtained from the automatic generation.<br><br>
-                                    </tab>
-                                    <tab heading="Train Silver" (selectTab)="downloadURL = 'https://drive.google.com/file/d/1bI-ecx7CyIDpI6FufnzUrzhz4ZWczT2B/view?usp=share_link'">
-                                        <b>Current dataset version:</b> v1.0 (released in December 2022)<br>
-                                        This CSV contains the Silver train split, obtained from the automatic generation.<br><br>
-                                    </tab>
-                                    <tab heading="Train Gold" (selectTab)="downloadURL = 'https://drive.google.com/file/d/1L4b5GRd4SgSEkGNgVo-HX2WaBXbrF850/view?usp=share_link'">
-                                        <b>Current dataset version:</b> v1.0 (released in December 2022)<br>
-                                        This CSV contains the Gold train split, obtained from human annotations over the silver annotations.<br><br>
-                                    </tab>
-                                    <tab heading="Dev Silver Random Distractors" (selectTab)="downloadURL = 'https://drive.google.com/file/d/1DsQQ01cCP5y8D0SgOSgHX_A7XaKVZ6Dn/view?usp=share_link'">
-                                        <b>Current dataset version:</b> v1.0 (released in December 2022)<br>
-                                        This CSV contains the Silver Dev split with random distractors, obtained from the automatic generation.<br><br>
-                                    </tab>
-                                    <tab heading="Dev Silver" (selectTab)="downloadURL = 'https://drive.google.com/file/d/1q6KBXXxWcr3d8HetuJtqSYZ6FBq2Ofks/view?usp=share_link'">
-                                        <b>Current dataset version:</b> v1.0 (released in December 2022)<br>
-                                        This CSV contains the Silver Dev split, obtained from the automatic generation.<br><br>
-                                    </tab>
-                                    <tab heading="Dev Gold" (selectTab)="downloadURL = 'https://drive.google.com/file/d/1EM7MJCmOHmL82SwEsqprHr4AzQoKMbpX/view?usp=share_link'">
-                                        <b>Current dataset version:</b> v1.0 (released in December 2022)<br>
-                                        This CSV contains the Gold Dev split, obtained from human annotations over the silver annotations.<br><br>
-                                    </tab>
-                                    <tab heading="Test Gold" (selectTab)="downloadURL = 'https://drive.google.com/file/d/1o-3m5YzCZ-on4jk34Y7sVkEsJcorxA7L/view?usp=share_link'">
-                                        <b>Current dataset version:</b> v1.0 (released in December 2022)<br>
-                                        This CSV contains the Gold Test split, obtained from human annotations over the silver annotations.<br><br>
-                                    </tab>
-                                    <div class="highlight">
-                                        <code [style.color]="'black'">
-                                            A_img:      rehabilitating_85.jpg # the first input image, <b>A</b>:A'<br>
-                                            B_img:      rehabilitating_26.jpg # the second input image, different from A' in a single key, A:<b>A'</b><br>
-                                            C_img:      clawing_188.jpg # the third input image, has the same different item as A, <b>B</b>:B'<br>
-                                            D_img:      clawing_4.jpg # the forth image, which is the analogy solution. Different from B in a single key (the same different one as in A:A'), B:<b>B'</b>. Hidden in the test set.<br>
-                                            candidates:                              ["tackling_94.jpg", "foraging_229.jpg", "clawing_4.jpg", "spearing_162.jpg"] # a list of candidates solutions to the analogy<br>
-                                            label:                                                    2  # the index of the ground-truth solution. Hidden in the test set.<br>
-                                        </code>
-
-
-                                    </div>
-                                    <br>
-                                    <b>Note:</b> We do not distribute image files as we do not legally own them. The annotation files contain image URLs.<br>
-                                    <b>Usage Restrictions:</b> VASR should only be used for non-commercial research.
-                                </tabset>
-                                <div class="button-container">
-                                    <a href="{{downloadURL}}" target="_blank"><button class="btn btn-neutral"><i class="tim-icons icon-cloud-download-93"> </i> Download</button></a>
-                                </div>
-                            </div>
+                                <li class="table-row" *ngFor="let model of models">
+                                    <div class="col-leaderboard col-2-AI-leaderboard"
+                                         data-label="Model">{{model.name}}</div>
+                                    <div class="col-leaderboard col-3-leaderboard"
+                                         data-label="Random Distractors">{{model["Random_Distractors"]}}</div>
+                                    <div class="col-leaderboard col-4-leaderboard"
+                                         data-label="Difficult Distractors">{{model['Difficult_Distractors']}}</div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
+
     </div>
+
     <footer class="footer">
         <div class="container">
             <div class="footer-row">
-                <a>Maintained by Lampent</a>
+                <a>Maintained by Ron Yosef</a>
             </div>
         </div>
     </footer>
 </div>
-
-

@@ -24,6 +24,7 @@ import {ExploreComponent} from './explore/explore.component';
 import { TestComponent } from './test/test.component';
 import { DownloadComponent } from './download/download.component';
 import { TestModalComponent } from './test/test-modal/test-modal.component';
+import {LeaderboardComponent} from './leaderboard/leaderboard.component';
 
 const routes: Routes = [
   { path: 'explore', component: ExploreComponent },
@@ -59,6 +60,7 @@ const routes: Routes = [
     AnalogyBoardComponent,
     TestComponent,
     DownloadComponent,
+    LeaderboardComponent,
     TestModalComponent
   ],
   exports: [

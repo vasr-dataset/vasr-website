@@ -31,24 +31,24 @@
                 [collapse]="isCollapsed"
                 id="navigation"
         >
-<!--            <div class="navbar-collapse-header">-->
-<!--                <div class="row">-->
-<!--                    <div class="col-6 collapse-brand"><a> BLK• </a></div>-->
-<!--                    <div class="col-6 collapse-close text-right">-->
-<!--                        <button-->
-<!--                                aria-controls="navigation-index"-->
-<!--                                aria-label="Toggle navigation"-->
-<!--                                class="navbar-toggler"-->
-<!--                                [attr.aria-expanded]="!isCollapsed"-->
-<!--                                (click)="isCollapsed = !isCollapsed"-->
-<!--                                id="navigation"-->
-<!--                                type="button"-->
-<!--                        >-->
-<!--                            <i class="tim-icons icon-simple-remove"> </i>-->
-<!--                        </button>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
+            <!--            <div class="navbar-collapse-header">-->
+            <!--                <div class="row">-->
+            <!--                    <div class="col-6 collapse-brand"><a> BLK• </a></div>-->
+            <!--                    <div class="col-6 collapse-close text-right">-->
+            <!--                        <button-->
+            <!--                                aria-controls="navigation-index"-->
+            <!--                                aria-label="Toggle navigation"-->
+            <!--                                class="navbar-toggler"-->
+            <!--                                [attr.aria-expanded]="!isCollapsed"-->
+            <!--                                (click)="isCollapsed = !isCollapsed"-->
+            <!--                                id="navigation"-->
+            <!--                                type="button"-->
+            <!--                        >-->
+            <!--                            <i class="tim-icons icon-simple-remove"> </i>-->
+            <!--                        </button>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--            </div>-->
             <ul class="navbar-nav">
                 <li class="nav-item p-0">
                     <a
@@ -59,6 +59,27 @@
                     >
                         <i class="fab fa-github"> </i>
                         <p class="d-lg-none d-xl-none">Github</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a
+                            class="nav-link"
+                            href="https://huggingface.co/datasets/nlphuji/vasr"
+                            placement="bottom"
+                            target="_blank"
+                    >
+                        <img style="width: 25px; height: 25px;"
+                             src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg">
+                        <p class="d-lg-none d-xl-none">Huggingface</p>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a
+                            class="nav-link"
+                            href="javascript:void(0)"
+                            [routerLink]="['/leaderboard']"
+                    >
+                        Leaderboard
                     </a>
                 </li>
                 <li class="nav-item">
@@ -111,7 +132,7 @@
         <div class="squares square7"></div>
         <div class="container center-container">
             <div class="content-center brand">
-                <h4 class="h1-seo" >VASR: Visual Analogies of Situation Recognition
+                <h4 class="h1-seo">VASR: Visual Analogies of Situation Recognition
 
                 </h4>
                 <h3 style="padding-top: 2rem">
@@ -120,7 +141,8 @@
                     Choose the image that best solves the analogy.
                     <br/>
                 </h3>
-                <app-analogy-board class="analogies-board" [analogy]="analogy" [candidates]="candidates" [title]="'A is to A’ as B is to?'" [enablePointer]="true"> </app-analogy-board>
+                <app-analogy-board class="analogies-board" [analogy]="analogy" [candidates]="candidates"
+                                   [title]="'A is to A’ as B is to?'" [enablePointer]="true"></app-analogy-board>
             </div>
         </div>
     </div>
@@ -142,8 +164,11 @@
                     </div>
                 </div>
                 <div class="stats-lower-label">
-                    Explore the different analogies in the VASR dataset on the <a class="stats-page-ref" href="./explore">Explore</a> page. <br/>
-                    Test your analogy skills with 5 difficult analogies on the <a class="stats-page-ref" href="./test">Test</a> page.
+                    Explore the different analogies in the VASR dataset on the <a class="stats-page-ref"
+                                                                                  href="./explore">Explore</a> page.
+                    <br/>
+                    Test your analogy skills with 5 difficult analogies on the <a class="stats-page-ref" href="./test">Test</a>
+                    page.
                 </div>
             </div>
 
@@ -153,7 +178,7 @@
             <div class="container">
                 <h3 class="mb-5 sub-title">Paper</h3>
                 <div class="abstract">
-                    <img src="/assets/img/abstract.JPG" />
+                    <img src="/assets/img/abstract.PNG"/>
                 </div>
             </div>
         </div>
@@ -164,36 +189,94 @@
                     <div class="row">
                         <div class="col-sm-3 col-6 mt-5 mt-sm-0">
                             <small class="d-block text-uppercase font-weight-bold mb-4">
-                                Charizard
+                                <a href="https://yonatanbitton.github.io/" class="flex">
+                                    <img class="uni-logo" src="assets/img/hebrew-university-logo.jpg"> Yonatan Bitton
+                                </a>
                             </small>
-                            <img
-                                    alt="Raised image"
-                                    class="img-fluid rounded shadow-lg"
-                                    src="/assets/img/charizard.png"
-                                    style="width: 150px;"
-                            />
+                            <a href="https://yonatanbitton.github.io/">
+                                <img
+                                        alt="Raised image"
+                                        class="img-fluid rounded shadow-lg"
+                                        src="/assets/img/authors/Yonatan%20Bitton.png"
+                                        style="width: 150px;"
+                                />
+                            </a>
                         </div>
                         <div class="col-sm-3 col-6 mt-5 mt-sm-0">
                             <small class="d-block text-uppercase font-weight-bold mb-4">
-                                Lampent
+                                <a href="https://ron-yosef.com/" class="flex">
+                                    <img class="uni-logo" src="assets/img/hebrew-university-logo.jpg"> Ron Yosef
+                                </a>
                             </small>
-                            <img
-                                    alt="Raised image"
-                                    class="img-fluid rounded shadow-lg"
-                                    src="/assets/img/lampent.png"
-                                    style="width: 150px;"
-                            />
+                            <a href="https://ron-yosef.com/" class="flex">
+                                <img
+                                        alt="Raised image"
+                                        class="img-fluid rounded shadow-lg"
+                                        src="/assets/img/authors/Ron%20Yosef.png"
+                                        style="width: 150px;"
+                                />
+                            </a>
                         </div>
                         <div class="col-sm-3 col-6 mt-5 mt-sm-0">
                             <small class="d-block text-uppercase font-weight-bold mb-4">
-                                Pikachu
+                                <a href="https://il.linkedin.com/in/eli-strugo-6255a596" class="flex">
+                                    <img class="uni-logo" src="assets/img/hebrew-university-logo.jpg"> Eli Strugo
+                                </a>
                             </small>
-                            <img
-                                    alt="Raised image"
-                                    class="img-fluid rounded shadow-lg"
-                                    src="/assets/img/pikachu.jpg"
-                                    style="width: 150px;"
-                            />
+                            <a href="https://il.linkedin.com/in/eli-strugo-6255a596" class="flex">
+
+                                <img
+                                        alt="Raised image"
+                                        class="img-fluid rounded shadow-lg"
+                                        src="/assets/img/authors/Eli%20Strugo.png"
+                                        style="width: 150px;"
+                                />
+                            </a>
+                        </div>
+                        <div class="col-sm-3 col-6 mt-5 mt-sm-0">
+                            <small class="d-block text-uppercase font-weight-bold mb-4">
+                                <a href="http://www.hyadatalab.com/people.html" class="flex">
+                                    <img class="uni-logo" src="assets/img/hebrew-university-logo.jpg"> Dafna Shahaf
+                                </a>
+                            </small>
+                            <a href="http://www.hyadatalab.com/people.html" class="flex">
+                                <img
+                                        alt="Raised image"
+                                        class="img-fluid rounded shadow-lg"
+                                        src="/assets/img/authors/Dafna%20Shahaf.png"
+                                        style="width: 150px;"
+                                />
+                            </a>
+                        </div>
+                        <div class="col-sm-3 col-6 mt-5 mt-sm-0">
+                            <small class="d-block text-uppercase font-weight-bold mb-4">
+                                <a href="https://schwartz-lab-huji.github.io/" class="flex">
+                                    <img class="uni-logo" src="assets/img/hebrew-university-logo.jpg"> Roy Schwartz
+                                </a>
+                            </small>
+                            <a href="https://schwartz-lab-huji.github.io/" class="flex">
+                                <img
+                                        alt="Raised image"
+                                        class="img-fluid rounded shadow-lg"
+                                        src="/assets/img/authors/Roy%20Schwartz.png"
+                                        style="width: 150px;"
+                                />
+                            </a>
+                        </div>
+                        <div class="col-sm-3 col-6 mt-5 mt-sm-0">
+                            <small class="d-block text-uppercase font-weight-bold mb-4">
+                                <a href="https://gabrielstanovsky.github.io/" class="flex">
+                                    <img class="uni-logo" src="assets/img/hebrew-university-logo.jpg"> Gabriel Stanovsky
+                                </a>
+                            </small>
+                            <a href="https://gabrielstanovsky.github.io/" class="flex">
+                                <img
+                                        alt="Raised image"
+                                        class="img-fluid rounded shadow-lg"
+                                        src="/assets/img/authors/Gabriel%20Stanovsky.png"
+                                        style="width: 150px;"
+                                />
+                            </a>
                         </div>
 
                     </div>
@@ -205,7 +288,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-row">
-                    <a>Maintained by Lampent</a>
+                <a>Maintained by Lampent</a>
             </div>
         </div>
     </footer>

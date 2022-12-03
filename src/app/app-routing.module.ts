@@ -7,13 +7,15 @@ import {MainComponent} from './pages/main/main.component';
 import {ExploreComponent} from './pages/explore/explore.component';
 import {DownloadComponent} from './pages/download/download.component';
 import {TestComponent} from './pages/test/test.component';
+import {LeaderboardComponent} from './pages/leaderboard/leaderboard.component';
 
 const routes: Routes = [
   { path: '*', component: MainComponent},
   { path: 'main', component: MainComponent },
   { path: 'explore', component: ExploreComponent },
   { path: 'download', component: DownloadComponent },
-  { path: 'test', component: TestComponent }
+  { path: 'test', component: TestComponent },
+  { path: 'leaderboard', component: LeaderboardComponent }
 ];
 
 @NgModule({
